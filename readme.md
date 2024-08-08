@@ -1,1 +1,1 @@
-![maket](img/test-site.fig)
+![maket](img/maket.png)
