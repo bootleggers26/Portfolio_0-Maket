@@ -137,6 +137,10 @@ header {
   height: 65px;
   margin-top: 53px;
 }
+.button-first a {
+  text-decoration: none;
+  color: #ffffff;
+}
 .button-first:hover {
   background-color: #ff0000aa;
   color: #ffffff;
@@ -175,12 +179,11 @@ header {
 /* 40 проектов */
 .project {
   background-color: #34547a;
-  margin-top: 100px;
+  margin-top: 104px;
   height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 102px;
 }
 
 .Flex_project-items {
@@ -230,8 +233,10 @@ header {
 /* скил */
 
 .skill {
-  padding: 20px;
   margin: 0 auto;
+  background-color: #ffffff;
+  padding-top: 102px;
+  padding-bottom: 101px;
 }
 
 .skill-list {
@@ -245,6 +250,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 150px;
 }
 .skill-content {
   display: flex;
@@ -268,6 +274,7 @@ header {
 }
 
 .skill-item {
+  padding-bottom: 30px;
 }
 
 .skill-1 {
@@ -291,20 +298,324 @@ header {
 }
 
 .progress-bar {
-  height: 10px;
+  height: 5px;
   background-color: #76c7c0;
   width: 0;
-  transition: width 0.3s ease;
+  transition: width 1s ease-in-out;
 }
 
 .skill-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
 }
 
 .skill-image-man {
   width: 555px;
   height: 450px;
+}
+/* Как я работаю */
+.work {
+  background-color: #eeeff1;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.howiwork {
+  margin: 0 auto;
+}
+.howiwork-h2 {
+  width: 403px;
+  height: 30px;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #000000;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 81px;
+}
+.howiwork-p {
+  width: 540px;
+  height: 67px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164.063%;
+  margin: 0 auto;
+  margin-bottom: 57px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/background-item.png);
+  height: 600px;
+  background-size: contain;
+}
+.itd_play {
+  background-color: #ff000071;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 30px auto;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.itd_play:hover {
+  background-color: #ff0000aa;
+}
+.itd_triangle {
+  margin-right: -7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 40px; /* Верхний, правый, нижний, левый */
+  border-color: transparent transparent transparent #ffffff; /* Цвет задается через border-color */
+  position: absolute;
+}
+/* проекты */
+.portfolio {
+  padding-top: 21px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+}
+.portfolio__grid-item {
+  position: relative;
+  overflow: hidden;
+}
+.view__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.portfolio__grid-item:hover .view__img {
+  opacity: 1;
+}
+.portfolio__grid-item:hover .portfolio__img {
+  transform: scale(1.1); /* Увеличиваем изображение */
+  /* box-shadow: 50px 50px 500px rgb(0, 0, 0); Добавляем тень */
+  filter: brightness(0.3); /* Затемняем изображение */
+}
+.modal {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.parners {
+  padding-top: 70px;
+  padding-bottom: 150px;
+  background-color: #ffffff;
+}
+
+.partners__flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.parners__item {
+  cursor: pointer;
+  width: 255px;
+  height: 120px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Плавный переход для увеличения */
+}
+.parners__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Плавный переход для увеличения */
+}
+.parners__item:hover {
+  transform: scale(1.1); /* Увеличение элемента при наведении */
+}
+
+/* форма */
+
+.form {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.form-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.h2__form-title {
+  width: 403px;
+  height: 30px;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+
+.p__form-title {
+  margin: 0 auto;
+  margin-bottom: 70px;
+  width: 540px;
+  height: 67px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164.063%;
+  color: #727272;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  gap: 20px;
+}
+
+.form-input {
+  width: 255px;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164.063%;
+  color: #5f5d5d;
+}
+
+.form-textarea {
+  width: 540px;
+  height: 175px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  resize: none;
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164.063%;
+  color: #5f5d5d;
+}
+
+.second-button {
+  align-self: center;
+  width: 190px;
+  height: 55px;
+  margin-top: 27px;
+  margin-bottom: 48px;
+}
+
+/* footer */
+footer {
+  background-color: #34547a;
+  height: 151px;
+  padding-top: 50px;
+  margin-bottom: 0px;
+}
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+}
+.footer-text {
+  margin: 0;
+  padding: 0;
+}
+.h3-footer {
+  font-family: Roboto;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.p-footer {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164.063%;
+  margin: 0;
+}
+.footer_icon-items {
+  display: flex;
+  gap: 20px;
+}
+.footer-icon {
+  width: 43.75px;
+  height: 40px;
 }

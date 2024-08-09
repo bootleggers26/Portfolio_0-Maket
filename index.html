@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Revalia&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
     <title>Maket</title>
   </head>
 
@@ -47,13 +48,12 @@
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
               на латинице с начала XVI века.
             </p>
-            <button class="button-first">Написать мне</button>
+            <button class="button-first"><a href="mailto:info@info.ru">Написать мне</a></button>
           </div>
         </div>
       </div>
     </header>
-  </body>
-</html>
+  
 
 <!----------------------------------------------------------- обо мне ----------------------------------------------------------------------------->
 
@@ -128,19 +128,19 @@
           <div class="skill-item">
             <span class="skill-1">Adobe Photoshop</span>
             <div class="progress-container">
-              <div class="progress-bar" style="width: 80%"></div>
+              <div class="progress-bar" data-progress="80"></div>
             </div>
           </div>
           <div class="skill-item">
             <span class="skill-1">Adobe Illustrator</span>
             <div class="progress-container">
-              <div class="progress-bar" style="width: 60%"></div>
+              <div class="progress-bar" data-progress="60"></div>
             </div>
           </div>
           <div class="skill-item">
             <span class="skill-1">Figma</span>
             <div class="progress-container">
-              <div class="progress-bar" style="width: 70%"></div>
+              <div class="progress-bar" data-progress="70"></div>
             </div>
           </div>
         </div>
@@ -151,3 +151,131 @@
     </div>
   </div>
 </section>
+
+
+<!--------------------------------------------------------- как я работаю ----------------------------------------------------------------------->
+
+<section class="work">
+  <div class="container">
+    <div class="howiwork">
+      <h2 class="howiwork-h2">Как я работаю</h2>
+      <p class="howiwork-p">
+        Lorem Ipsum - это текст-"рыба", часто используемый в печати и <br />
+        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на
+        латинице с начала XVI века.
+      </p>
+    </div>
+    <div class="row">
+      <a href="https://www.youtube.com/watch?v=uogMDqVv_Tc" target="_blank" class="itd_play">
+        <div class="itd_triangle"></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!------------------------------------------------------------ проекты ---------------------------------------------------------------------------->
+<section class="portfolio">
+    <div class="portfolio__grid">
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background-item2.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background_item3.3.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background-item2.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background_item3.3.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background_item3.3.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background-item2.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background_item3.3.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+      <div class="portfolio__grid-item">
+        <img class="portfolio__img" src="img/background-item2.png" alt="portfolio" onclick="openModal(this.src)" />
+        <img class="view__img" src="img/view.png" alt="portfolio" />
+      </div>
+    </div>
+</section>
+
+<!-------------------------------------------------------------- Модальное окно ------------------------------------------------------------------>
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage" />
+</div>
+
+<section class="parners">
+  <div class="container">
+    <div class="partners__flex">
+      <div class="parners__item">
+        <img class="partners" src="img/microsoft.png" alt="partners" />
+      </div>
+      <div class="parners__item">
+        <img class="partners_img" src="img/microsoft.png" alt="partners" />
+      </div>
+      <div class="parners__item">
+        <img class="partners_img" src="img/microsoft.png" alt="partners" />
+      </div>
+      <div class="parners__item">
+        <img class="partners_img" src="img/microsoft.png" alt="partners" />
+      </div>      
+    </div>
+  </div>
+</section>
+
+<section class="form">
+  <div class="container">
+    <div class="form-title">
+      <h2 class="h2__form-title">Хотите веб-сайт?</h2>
+      <p class="p__form-title">
+        Lorem Ipsum - это текст-"рыба", часто используемый в печати и <br />
+        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на
+        латинице с начала XVI века.
+      </p>
+    </div>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Ваше имя" class="form-input" />
+        <input type="email" id="email" name="email" placeholder="Ваш e-mail" class="form-input" />
+      </div>
+      <textarea id="message" name="message" placeholder="Сбщение" class="form-textarea"></textarea>
+      <button class="button-first second-button"><a href="mailto:info@info.ru">Отправить</a></button>
+    </form>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-flex">
+    <div class="footer-text">
+      <div class="h3-footer">Иванов Иван</div>
+      <div class="p-footer">&copy 2018. Все права защищены.</div>
+    </div>
+    <div class="footer_icon-items">
+      <img class="footer-icon" src="img/vk-social-network-logo.svg" alt="partners" />
+      <img class="footer-icon" src="img/vk-social-network-logo.svg" alt="partners" />
+      <img class="footer-icon" src="img/vk-social-network-logo.svg" alt="partners" />
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
