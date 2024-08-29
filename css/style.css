@@ -75,6 +75,43 @@ header {
   font-size: 16px;
   color: #000000;
 }
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  padding-top: 14px;
+}
+
+.burger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+.menu-modal {
+  font-size: 32px;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.menu-modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-modal li,
+.menu-modal a {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  color: #2f2e2e;
+  text-decoration: none;
+}
 
 .header {
   background-color: #eeeff1;
@@ -83,8 +120,8 @@ header {
 .full-screen-flex {
   display: flex;
   justify-content: space-between;
+  margin-top: 142px;
   align-items: center;
-  padding-top: 142px;
 
   /* gap: 130px; */
 }
@@ -93,15 +130,16 @@ header {
   margin-bottom: 23px;
 }
 .monitor_logo {
-  width: 357px;
-  height: 233.7px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .h1 {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 541px;
+  max-width: 541px;
   height: 45px;
   color: #000000;
   font-family: Roboto;
@@ -114,7 +152,7 @@ header {
 
 .p1 {
   color: #727272;
-  width: 540px;
+  max-width: 540px;
   height: 67px;
   font-family: Roboto;
   font-size: 16px;
@@ -122,7 +160,7 @@ header {
   font-weight: 400;
   line-height: 164.063%;
   margin: 0;
-  padding-top: 51px;
+  margin-top: 51px;
   margin-bottom: 60px;
 }
 
@@ -139,7 +177,7 @@ header {
   transition: background-color 0.3s ease;
   width: 225px;
   height: 65px;
-  margin-top: 53px;
+  margin-top: 3px;
 }
 .button-first a {
   text-decoration: none;
@@ -157,7 +195,7 @@ header {
   text-align: center;
 }
 .h2-about__me {
-  width: 403px;
+  max-width: 403px;
   height: 30px;
   font-size: 32px;
   font-style: normal;
@@ -169,7 +207,7 @@ header {
   margin-bottom: 46px;
 }
 .p-about__me {
-  width: 540px;
+  max-width: 540px;
   height: 67px;
   font-size: 16px;
   font-style: normal;
@@ -184,7 +222,7 @@ header {
 .project {
   background-color: #34547a;
   margin-top: 104px;
-  height: 250px;
+  min-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,6 +289,7 @@ header {
 
 .skill-list-flex {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -266,7 +305,7 @@ header {
 }
 
 .skill_h2 {
-  width: 403px;
+  max-width: 403px;
   height: 30px;
   margin-bottom: 52px;
   font-family: Roboto;
@@ -283,7 +322,7 @@ header {
 
 .skill-1 {
   margin-bottom: 20px;
-  width: 128px;
+  max-width: 128px;
   height: 15px;
   font-family: Roboto;
   font-size: 16px;
@@ -315,8 +354,9 @@ header {
 }
 
 .skill-image-man {
-  width: 555px;
-  height: 450px;
+  width: 100%;
+  max-width: 555px;
+  height: auto;
 }
 /* Как я работаю */
 .work {
@@ -328,7 +368,7 @@ header {
   margin: 0 auto;
 }
 .howiwork-h2 {
-  width: 403px;
+  max-width: 403px;
   height: 30px;
   font-family: Roboto;
   font-size: 32px;
@@ -341,7 +381,7 @@ header {
   padding-bottom: 81px;
 }
 .howiwork-p {
-  width: 540px;
+  max-width: 540px;
   height: 67px;
   text-align: center;
   font-family: Roboto;
@@ -503,9 +543,8 @@ header {
   text-align: center;
 }
 .h2__form-title {
-  width: 403px;
+  max-width: 403px;
   height: 30px;
-  font-family: Roboto;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -517,9 +556,8 @@ header {
 .p__form-title {
   margin: 0 auto;
   margin-bottom: 70px;
-  width: 540px;
+  max-width: 540px;
   height: 67px;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -536,17 +574,17 @@ header {
 
 .form-group {
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
 .form-input {
-  width: 255px;
+  width: 260px;
   height: 50px;
   padding: 0 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #fff;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -555,15 +593,14 @@ header {
 }
 
 .form-textarea {
-  width: 540px;
+  width: 100%;
+  max-width: 540px;
   height: 175px;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #fff;
   resize: none;
-
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -577,6 +614,7 @@ header {
   height: 55px;
   margin-top: 27px;
   margin-bottom: 48px;
+  text-decoration: none;
 }
 
 /* footer */
@@ -588,6 +626,7 @@ footer {
 }
 .footer-flex {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
@@ -622,4 +661,149 @@ footer {
 .footer-icon {
   width: 43.75px;
   height: 40px;
+}
+/* стили для медиа запросов */
+@media screen and (max-width: 1300px) {
+  .footer-flex {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .skill-list-flex {
+    padding-left: 0px;
+  }
+  .skill-list-flex-left {
+    margin-left: 20px;
+  }
+  .skill-list-flex,
+  .skill-image {
+    margin-right: 30px;
+  }
+  .menu-inners {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .skill-list-flex {
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .header {
+    margin-bottom: 200px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .full-screen-flex {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .full-screen-left {
+    padding-left: 0px;
+  }
+  .full-screen-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .h1 {
+    justify-content: center;
+  }
+  .skill-list {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .partners__flex {
+    justify-content: space-evenly;
+  }
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu-inners {
+    justify-content: space-around;
+  }
+  .sidenav {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .portfolio__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  .Flex_project-items {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contact-form,
+  .footer-flex,
+  .form-title {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form-group {
+    flex-direction: column; /* Вертикальное расположение элементов */
+    gap: 15px; /* Отступы между элементами */
+  }
+  .footer-flex {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .h1,
+  .p1 {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .monitor_logo {
+    margin-bottom: 50px;
+  }
+  .button-first {
+    margin-bottom: 100px;
+  }
+  .monitor_logo {
+    max-width: 300px;
+  }
+  .button-first {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact-form {
+    margin-top: 20px;
+  }
+  .Flex_project-items {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .skill_h2 {
+    text-align: center;
+  }
+  .footer-flex {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    height: 200px;
+  }
+  .footer-flex {
+    gap: 20px;
+  }
+  .howiwork-p {
+    margin-bottom: 100px;
+  }
 }
