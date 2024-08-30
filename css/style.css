@@ -30,6 +30,7 @@ header {
   width: 100%;
   background-color: #eeeff1;
   padding-top: 50px;
+  z-index: 1;
 }
 
 .menu-inners {
@@ -675,7 +676,7 @@ footer {
   .skill-list-flex-left {
     margin-left: 20px;
   }
-  .skill-list-flex,
+
   .skill-image {
     margin-right: 30px;
   }
